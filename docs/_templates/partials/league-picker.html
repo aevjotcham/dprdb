@@ -1,0 +1,18 @@
+{% set current_league = pagename.split('/')[0] %}
+{% set section = pagename.split('/')[-1] %}
+{% for league in leagues if league.slug == current_league %}
+<div class="league-toolbar {{ league.slug }}">
+  <div class="league-identity">
+    <img src="{{ pathto('_static/logos/' + league.slug + '.svg', 1) }}" width="40" height="40" alt="">
+    <span>{{ league.name }}</span>
+  </div>
+  <div class="league-picker">
+    <label for="league-selector">League</label>
+    <select id="league-selector" data-league-selector>
+      {% for option in leagues %}
+        <option value="{{ pathto(option.slug + '/' + section) }}"{% if option.slug == current_league %} selected{% endif %}>{{ option.slug|upper }}</option>
+      {% endfor %}
+    </select>
+  </div>
+</div>
+{% endfor %}

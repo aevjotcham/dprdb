@@ -1,0 +1,10 @@
+{% extends "dprdb-home.html" if pagename == "index" else "!page.html" %}
+{% block htmltitle %}
+  {% if '/' in pagename %}
+    <title>{{ title|striptags|e }} · {{ pagename.split('/')[0]|upper }} — {{ project|e }}</title>
+  {% else %}{{ super() }}{% endif %}
+{% endblock %}
+{% block content %}
+  {% include "partials/league-picker.html" %}
+  <div class="section-content">{{ body }}</div>
+{% endblock %}

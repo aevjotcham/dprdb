@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ project }}</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&display=swap">
+<link rel="stylesheet" href="{{ pathto('_static/landing.css', 1) }}">
+</head>
+<body>
+<header class="top-nav">
+  <div class="brand">DaBois Fantasy League Archives</div>
+</header>
+
+<main class="hero-section">
+  <h1 class="hero-title">Select A League</h1>
+  <p class="desktop-note">Best viewed on desktop. Mobile layout is still in progress.</p>
+  
+  <div class="sport-grid">
+    <a href="{{ pathto('dba/managers') }}" class="sport-card card-dba">
+      <div class="card-content">
+        <div class="league-header">
+          <img src="{{ pathto('_static/logos/dba.svg', 1) }}" alt="DBA Logo" class="league-logo">
+          <h2>DBA</h2>
+        </div>
+        <p>DaBois Basketball Association</p>
+      </div>
+    </a>
+
+    <a href="{{ pathto('dfl/managers') }}" class="sport-card card-dfl">
+      <div class="card-content">
+        <div class="league-header">
+          <img src="{{ pathto('_static/logos/dfl.svg', 1) }}" class="league-logo" alt="DFL">
+          <h2>DFL</h2>
+          </div>
+          <p>DaBois Football League</p>
+      </div>
+    </a>
+
+    <a href="{{ pathto('dlb/managers') }}" class="sport-card card-dlb">
+      <div class="card-content">
+        <div class="league-header">
+          <img src="{{ pathto('_static/logos/dlb.svg', 1) }}" class="league-logo" alt="DLB">
+          <h2>DLB</h2>
+        </div>
+        <p>DaBois League Baseball</p>
+      </div>
+    </a>
+  </div>
+
+  <footer class="credits">
+
+    <div class="social-links">
+      <a aria-label="GitHub" href="https://github.com/aevjotcham" target="_blank" rel="noopener noreferrer" class="credit-link">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.3c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.7-1.3-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.4-5.5-6a4.7 4.7 0 0 1 1.2-3.2c-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2a4.7 4.7 0 0 1 1.2 3.2c0 4.6-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.4c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+      </a>
+      <a aria-label="LinkedIn" href="https://linkedin.com/in/ajotcham" target="_blank" rel="noopener noreferrer" class="credit-link">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5V9h3ZM6.5 7.7a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4ZM19 19h-3v-5.3c0-1.3-.5-2.2-1.6-2.2-1.2 0-1.9.9-1.9 2.2V19h-3V9h2.9v1.4c.6-1 1.6-1.6 3-1.6 2.1 0 3.6 1.4 3.6 4.3Z"/></svg>
+      </a>
+    </div>
+    
+    <div class="host-line">
+      <svg width="12" height="12" viewBox="0 0 76 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M37.5273 0L75.0546 65H0L37.5273 0Z" fill="currentColor"/>
+      </svg>
+      <span><a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel</a></span>
+    </div>
+  </footer>
+</main>
+
+</body>
+</html>

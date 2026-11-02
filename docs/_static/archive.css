@@ -1,0 +1,28 @@
+/* League colors and navigation on the Shibuya content pages. */
+.dba { --league-color: #2f6f7f; }
+.dfl { --league-color: #8f63e6; }
+.dlb { --league-color: #b02e2e; }
+.archive-navigation .all-leagues { display: inline-block; color: var(--gray-11); margin-bottom: 2rem; font-size: .85rem; }
+.sidebar-league { display: flex; align-items: center; gap: .75rem; font-weight: 800; font-size: 1.5rem; color: var(--league-color); margin-bottom: 1.25rem; }
+.sidebar-league img, .league-identity img { object-fit: contain; }
+.archive-navigation ul { padding: 0; margin: 0; list-style: none; }
+.archive-navigation li { margin: .3rem 0; }
+.archive-navigation li a { display: block; padding: .65rem .8rem; border-radius: .5rem; color: var(--gray-11); font-size: .875rem; text-decoration: none; }
+.archive-navigation li a:hover { background: var(--gray-3); color: var(--gray-12); }
+.archive-navigation a[aria-current="page"] { background: var(--accent-3); color: var(--accent-11); font-weight: 650; }
+.league-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-bottom: 1.5rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--gray-5); }
+.league-identity { display: flex; align-items: center; gap: .8rem; font-weight: 600; color: var(--gray-11); font-size: .9rem; }
+.league-picker { display: flex; align-items: center; gap: .75rem; flex-shrink: 0; }
+.league-picker label { color: var(--gray-11); font-size: .8rem; font-weight: 600; }
+.league-picker select { appearance: auto; min-width: 100px; padding: .6rem .8rem; border: 1px solid var(--gray-7); border-radius: .5rem; background: var(--gray-2); color: var(--gray-12); font: inherit; font-weight: 700; cursor: pointer; }
+.league-picker select:focus-visible, .archive-navigation a:focus-visible { outline: 3px solid var(--accent-9); outline-offset: 3px; }
+.section-content { min-height: 55vh; }
+/* Empty sections do not need a right-hand contents panel. */
+.sy-rside, .rside-overlay, button[aria-controls="rside"] { display: none; }
+.sy-main { min-width: 0; }
+@media (max-width: 640px) {
+  .league-toolbar { align-items: flex-start; flex-direction: column; gap: 1rem; }
+  .league-picker { width: 100%; justify-content: space-between; }
+  .league-picker select { min-width: 150px; }
+  .league-identity { font-size: .85rem; }
+}

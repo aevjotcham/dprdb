@@ -1,0 +1,16 @@
+{% set current_league = pagename.split('/')[0] %}
+<nav class="archive-navigation" aria-label="League sections">
+  <a class="all-leagues" href="{{ pathto('index') }}">← All leagues</a>
+  {% for league in leagues if league.slug == current_league %}
+    <div class="sidebar-league {{ league.slug }}">
+      <img src="{{ pathto('_static/logos/' + league.slug + '.svg', 1) }}" width="28" height="28" alt="">
+      <span>{{ league.slug|upper }}</span>
+    </div>
+    <ul>
+      {% for slug, label in league_sections %}
+        {% set target = league.slug + '/' + slug %}
+        <li><a href="{{ pathto(target) }}"{% if pagename == target %} aria-current="page"{% endif %}>{{ label }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</nav>
